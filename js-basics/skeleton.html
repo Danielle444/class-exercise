@@ -1,30 +1,48 @@
 <!DOCTYPE html>
-<html lang="he">
+<html leng="he">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Basics Practice</title>
+    <style>
+      #h1 {
+        direction: ltr;
+      }
+    </style>
     <!-- חלק א' - כפתורי רדיו לשינוי כיוון הכותרת -->
     <script>
       function changeLeft() {
         console.log("changeLeft");
+        document.getElementById("h1").style.textAlign = "left";
       }
 
       function changeRight() {
         console.log("changeRight");
+        document.getElementById("h1").style.textAlign = "right";
       }
     </script>
     <!-- חלק ב' - העברת טקסט מתיבה לכפתור -->
     <script>
       function changeTxt() {
         console.log("changeTxt function called");
+        document.getElementById("btn").value = document.getElementById("txt").value;
+        document.getElementById("txt").value = "";
       }
     </script>
   </head>
   <body>
     <div id="container">
-      <div id="first"><!-- חלק א' - כפתורי רדיו לשינוי כיוון הכותרת  --></div>
-      <div id="second"><!-- חלק ב' - העברת טקסט מתיבה לכפתור  --></div>
+      <div id="first" >
+        <h1 id="h1">ברוכים הבאים</h1>
+        <input type="radio" name="btn" checked onclick="changeLeft()" />שמאל
+        <br />
+        <input type="radio" name="btn" onclick="changeRight()" />ימין
+      </div>
+      <div id="second">
+        <input type="text" id="txt" />
+        <br />
+        <input type="button" value="button" id="btn" onclick="changeTxt()" />
+      </div>
     </div>
   </body>
 </html>
