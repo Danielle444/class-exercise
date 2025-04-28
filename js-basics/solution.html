@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      #container div {
+        margin: 20px;
+      }
+    </style>
+    <script>
+      function changeLeft() {
+        console.log("changeLeft");
+        document.getElementById("header").style.textAlign = "left";
+      }
+      function changeRight() {
+        console.log("changeRight");
+        document.getElementById("header").style.textAlign = "right";
+      }
+      function changeTxt() {
+        // document.getElementById("btn").value = document.getElementById("txt").value;
+        let x = document.getElementById("txt").value;
+        // console.log("changeTxt", x);
+        document.getElementById("btn").value = x;
+        document.getElementById("txt").value = "";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <!-- חלק א' - כפתורי רדיו לשינוי כיוון הכותרת  -->
+      <div id="first">
+        <h1 id="header">ברוכים הבאים</h1>
+        <input type="radio" checked name="dd" onclick="changeLeft()" /> שמאל
+        <br />
+        <input type="radio" name="dd" onclick="changeRight()" /> ימין
+        <br />
+      </div>
+
+      <!-- חלק ב' - העברת טקסט מתיבה לכפתור  -->
+      <div id="second">
+        <input type="text" id="txt" />
+        <br />
+        <input type="button" value="button" onclick="changeTxt()" id="btn" />
+      </div>
+    </div>
+  </body>
+</html>
