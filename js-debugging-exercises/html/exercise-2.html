@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Debugging Exercise</title>
+  </head>
+  <body>
+    <h1>Open the DevTools Console to see output</h1>
+    <script>
+      function multiply(a, b) {
+        let result = a * b;
+        return result;
+      }
+
+      function calculateTotal(price, tax) {
+        let total = multiply(price, tax);
+        return total;
+      }
+
+      let totalPrice = calculateTotal(100);
+      console.log("Total:", totalPrice);
+    </script>
+  </body>
+</html>
