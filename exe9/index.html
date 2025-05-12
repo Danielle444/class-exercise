@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style type="text/css">
+      h1,
+      h2 {
+        text-align: center;
+      }
+
+      #store > img {
+        display: block;
+        height: 100px;
+        margin: 20px auto;
+      }
+
+      #basket > img {
+        height: 100px;
+        margin-left: 20px;
+      }
+
+      #container {
+        width: 50%;
+        margin: 0px auto;
+        height: 500px;
+      }
+
+      #container > div {
+        float: left;
+        border: 10px solid black;
+
+        height: 100%;
+      }
+
+      #store {
+        width: 20%;
+      }
+
+      #basket {
+        width: 70%;
+      }
+    </style>
+
+    <script>
+      function buy(id) {
+        // build the img html element, note that the id is identical
+        // to the name of the image
+        // remember to add the dblclick event listener that will call removeItem
+        // add it to the basket div using appendChild
+      }
+
+      function removeItem(o) {
+        // removing is done using the parent element
+        // note that you can pass the image object you want to remove
+        // as a parameter (o)
+        console.log(o);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="store">
+        <h1>Store</h1>
+        <h2>Click to Add</h2>
+        <img src="images/apple.jpg" id="apple" onclick="buy(this.id)" />
+        <img src="images/mango.jpg" id="mango" onclick="buy(this.id)" />
+        <img src="images/orange.jpg" id="orange" onclick="buy(this.id)" />
+      </div>
+
+      <div id="basket">
+        <h1>Basket</h1>
+        <h2>Double click to remove</h2>
+      </div>
+    </div>
+  </body>
+</html>

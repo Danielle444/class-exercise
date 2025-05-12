@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <script>
+      const numbers = [1, 2, 3, 4, 5];
+ function getAverage(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        console.log("current number: " + numbers[i]);
+        console.log("current sum: " + sum);
+      sum += numbers[i];
+    }
+    return sum / numbers.length;
+  }
+    console.log("Average: " + getAverage(numbers));
+  </script>
+</body>
+</html>
